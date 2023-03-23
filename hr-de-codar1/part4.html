@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>part4</title>
+</head>
+<body>
+    <script>
+        //  part3  Considerando a figura acima, escreva um programa para cada forma que calcule e exiba em tela cada uma de suas respectivas áreas. O usuário irá informar os valores de cada variável.
+        //
+        var escolha = prompt("Qual área você quer calcular: \n( Retângulo, Quadrado, Losango, Trapézio, Parlelogramo, Triângulo e Círculo)");
+
+switch(escolha) {
+    case "Retângulo":
+        var base = Number(prompt("Me diga a base do retângulo em cm: "));
+        var altura = Number(prompt("Me diga a altura do retângulo em cm: "));
+        alert("A área do retângulo é: " +base*altura + "cm².");
+        break;
+    case "Quadrado":
+        var lado = Number(prompt("Me diga a medida do lado do quadrado em cm"));
+        alert("A área do quadrado é: "+ lado**2 + "cm².");
+        break;
+    case "Losango":
+        var diagonal_maior = Number(prompt("Me diga a diagonal maior do losango em cm: "));
+        var diagonal_menor = Number(prompt("Me diga a diagonal menor do losango em cm: "));
+        alert("A área do losango é: "+ (diagonal_maior*diagonal_menor)/2 + "cm².");
+        break;
+    case "Trapézio":
+        var base_maior = Number(prompt("Me diga a medida da base maior do trapézio em cm: "));
+        var base_menor = Number(prompt("Me diga a medida da base menos do trapézio em cm: "));
+        var altura = Number(prompt("Me diga a altura do trapézio em cm: "));
+        alert("A área do trapézio é: " + ((base_maior+base_menor)*altura)/2 + "cm².");
+        break;
+    case "Paralelogramo":
+        var base = Number(prompt("Me diga a base do paralelogramo em cm: "));
+        var altura = Number(prompt("Me diga a altura do paralelogramo em cm: "));
+        alert("A área do paralelogramo é: " + base*altura + "cm².");
+        break;
+    case "triângulo":
+        var base = Number(prompt("Me diga o valor da base do triângulo em cm: "));
+        var altura = Number(prompt("Me diga o valor da altura do triângulo em cm: "));
+        alert("A área do triângulo é: " + (base*altura)/2 + "cm².")
+        break;
+    case "Círculo":
+        var raio = Number(prompt("Me diga o raio do círculo em cm: "));
+        alert("A área do círculo é: " + Math.PI*(raio**2) + "cm².");
+        break;
+    default:
+        alert("Nenhuma opção foi selecionada, digite uma opção válida e tente novamente!");
+}
+        </script>
+</body>
+</html>
